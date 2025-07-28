@@ -16,7 +16,7 @@
   </head>
   <body>
     <header>
-      <div class="navbar bg-base-200 shadow-sm">
+      <div class="navbar bg-base-200 shadow-sm px-20">
         <div class="navbar-start">
           <div class="dropdown">
             <div tabindex="0" role="button" class="btn btn-ghost lg:hidden">
@@ -45,8 +45,8 @@
             </ul>
           </div>
 
-          <a class="btn">Home</a>
-          <a class="btn">Blog</a>
+          <a class="btn hidden btn-success">Home</a>
+          <a class="btn btn-success">Blog</a>
         </div>
         <div class="navbar-center">
           <a class="btn btn-ghost text-xl"
@@ -55,23 +55,27 @@
         </div>
         <div class="navbar-end">
           <a class="btn"
-            ><img src="./assets/coin.png" alt="" /> <span>5500</span> BDT</a
+            ><img src="./assets/coin.png" alt="" />
+            <span id="main-balance">5500</span> BDT</a
           >
         </div>
       </div>
     </header>
     <main class="container mt-10 mx-auto">
       <div class="flex justify-center space-x-5">
-        <button class="btn btn-neutral btn-outline">Donation</button>
+        <button class="btn btn-success">Donation</button>
         <button class="btn btn-outline">History</button>
       </div>
-      <section class="grid md:grid-cols-2 grid-cols-1 gap-3 mt-10 border border-gray-300 rounded-xl p-4">
+      <section
+        class="grid md:grid-cols-2 grid-cols-1 gap-3 mt-10 border border-gray-300 rounded-xl p-4"
+      >
         <div>
           <img src="./assets/noakhali.png" alt="" />
         </div>
         <div class="space-y-3">
           <button class="btn">
-            <img src="./assets/coin.png" alt="" /> <span>5500</span> BDT
+            <img src="./assets/coin.png" alt="" />
+            <span id="noakhali-balance">5500</span> BDT
           </button>
           <h4 class="font-bold">Donate for Flood at Noakhali, Bangladesh</h4>
           <p class="text-gray-600 font-light">
@@ -82,11 +86,70 @@
             relief efforts and making a positive impact on the lives of those in
             need.
           </p>
+          <input
+            type="text"
+            placeholder="Write donate amount"
+            class="input"
+            id="noakhali-input"
+          />
+          <br />
+          <!-- <button class="btn btn-wide btn-success" id="noakhali-btn">
+            Donate Now
+          </button> -->
+          <!-- modal start -->
+          <!-- Open the modal using ID.showModal() method -->
+          <button class="btn btn-wide btn-success" id="noakhali-btn">
+            Donate Now
+          </button>
+          <dialog id="my_modal_5" class="modal modal-bottom sm:modal-middle">
+            <div class="modal-box flex flex-col items-center">
+              <h2 class="text-xl font-bold py-4">Congratulations!</h3>
+                <p class="flex space-x-2">
+                  <img src="./assets/coin.png" alt=""> <span id="modal-amount"></span> <span>BDT</span>
+                </p>
+              <p class="py-4">
+               You have donated for humankind
+              </p>
+              <h5 class="font-bold">Successfully</h5>
+              <div class="modal-action">
+                <form method="dialog">
+                  <!-- if there is a button in form, it will close the modal -->
+                  <button class="btn text-xs">Close Confirmation</button>
+                </form>
+              </div>
+            </div>
+          </dialog>
+          <!-- modal end -->
+        </div>
+      </section>
+      <section
+        class="grid md:grid-cols-2 grid-cols-1 gap-3 mt-10 border border-gray-300 rounded-xl p-4"
+      >
+        <div>
+          <img src="./assets/feni.png" alt="" />
+        </div>
+        <div class="space-y-3">
+          <button class="btn">
+            <img src="./assets/coin.png" alt="" /> <span>5500</span> BDT
+          </button>
+          <h4 class="font-bold">Donate for Flood Relief in Feni,Bangladesh</h4>
+          <p class="text-gray-600 font-light">
+            The recent floods in Feni have devastated local communities, leading
+            to severe disruption and loss. Your generous donation will help
+            provide immediate aid, including food, clean water, and medical
+            supplies, to those affected by this calamity. Together, we can offer
+            crucial support and help rebuild lives in the aftermath of this
+            disaster. Every contribution counts towards making a real
+            difference. Please consider donating today to assist those in urgent
+            need.
+          </p>
           <input type="text" placeholder="Write donate amount" class="input" />
-          <br>
+          <br />
           <button class="btn btn-wide btn-success">Donate Now</button>
         </div>
       </section>
     </main>
+    <script src="./js/utility.js"></script>
+    <script src="./js/donation.js"></script>
   </body>
 </html>
