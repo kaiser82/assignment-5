@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Blog</title>
+    <link
+      href="https://cdn.jsdelivr.net/npm/daisyui@5"
+      rel="stylesheet"
+      type="text/css"
+    />
+    <script src="https://cdn.jsdelivr.net/npm/@tailwindcss/browser@4"></script>
+  </head>
+  <body>
+    <header class="sticky top-0">
+      <div class="navbar bg-base-200 shadow-sm px-20">
+        <div class="navbar-start">
+          <div class="dropdown">
+            <div tabindex="0" role="button" class="btn btn-ghost lg:hidden">
+              <svg
+                xmlns="http://www.w3.org/2000/svg"
+                class="h-5 w-5"
+                fill="none"
+                viewBox="0 0 24 24"
+                stroke="currentColor"
+              >
+                <path
+                  stroke-linecap="round"
+                  stroke-linejoin="round"
+                  stroke-width="2"
+                  d="M4 6h16M4 12h8m-8 6h16"
+                />
+              </svg>
+            </div>
+            <ul
+              tabindex="0"
+              class="menu menu-sm dropdown-content bg-base-100 rounded-box z-1 mt-3 w-52 p-2 shadow"
+            >
+              <li><a>Item 1</a></li>
+
+              <li><a>Item 3</a></li>
+            </ul>
+          </div>
+
+          <a id="home-btn2" class="btn  btn-success">Home</a>
+          <a id="blog-btn2" class="btn hidden btn-success">Blog</a>
+        </div>
+        <div class="navbar-center">
+          <a class="btn btn-ghost text-xl"
+            ><img src="./assets/logo.png" alt="" /> Donate Bangladesh</a
+          >
+        </div>
+        <div class="navbar-end">
+          <a class="btn"
+            ><img src="./assets/coin.png" alt="" />
+            <span id="main-balance2">5500</span> BDT</a
+          >
+        </div>
+      </div>
+      
+    </header>
+    <main class="container mx-auto mt-5">
+      <section>
+        <div class="collapse collapse-arrow bg-base-100 border border-base-300">
+          <input type="radio" name="my-accordion-2" checked="checked" />
+          <div class="collapse-title font-semibold">
+            How do I create an account?
+          </div>
+          <div class="collapse-content text-sm">
+            Click the "Sign Up" button in the top right corner and follow the
+            registration process.
+          </div>
+        </div>
+        <div class="collapse collapse-arrow bg-base-100 border border-base-300">
+          <input type="radio" name="my-accordion-2" />
+          <div class="collapse-title font-semibold">
+            I forgot my password. What should I do?
+          </div>
+          <div class="collapse-content text-sm">
+            Click on "Forgot Password" on the login page and follow the
+            instructions sent to your email.
+          </div>
+        </div>
+        <div class="collapse collapse-arrow bg-base-100 border border-base-300">
+          <input type="radio" name="my-accordion-2" />
+          <div class="collapse-title font-semibold">
+            How do I update my profile information?
+          </div>
+          <div class="collapse-content text-sm">
+            Go to "My Account" settings and select "Edit Profile" to make
+            changes.
+          </div>
+        </div>
+      </section>
+    </main>
+    <script src="./js/utility.js"></script>
+    <script src="./js/blog.js"></script>
+  </body>
+</html>
